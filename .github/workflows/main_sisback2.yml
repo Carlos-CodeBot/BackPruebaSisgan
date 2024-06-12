@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - SisganBack
+name: Build and deploy JAR app to Azure Web App - sisBack2
 
 on:
   push:
@@ -48,15 +48,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_07733A5D440E4877916C08B85F78AEEB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_EEEAA1E7BC624B01B9722F73C9CDEF4F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A4F91FA17AA64F02A5D71F628916A6AE }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A375DA56B4774344889A634A6B06F3B1 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C8D7D3F86B1B43B09640E2A478F4CE36 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C6D07E4D0D8D464091D81142AB61E8D0 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'SisganBack'
+          app-name: 'sisBack2'
           slot-name: 'Production'
           package: '*.jar'
           
